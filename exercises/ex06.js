@@ -13,5 +13,18 @@ Write a series of ternary statements that sets the variable category equal to:
 "undefined" if an animal doesn't eat plants or animals
 Use the eatsPlants and eatsAnimals variables to test your code.
 
-If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console. 
+If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console.
 */
+
+const eatsPlants = false
+const eatsAnimals = true
+
+if (eatsPlants && eatsAnimals) {
+  console.log("omnivore")
+} else if (eatsPlants) {
+  console.log("herbivore")
+} else if (eatsAnimals) {
+  console.log("carnivore")
+} else {
+  console.log("undefined")
+}
