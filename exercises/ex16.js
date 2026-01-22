@@ -4,16 +4,16 @@ For this quiz, you're going to create a function called buildTriangle() that wil
 buildTriangle(10);
 Returns:
 
-* 
-* * 
-* * * 
-* * * * 
-* * * * * 
-* * * * * * 
-* * * * * * * 
-* * * * * * * * 
-* * * * * * * * * 
-* * * * * * * * * * 
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * * * *
+* * * * * * * *
+* * * * * * * * *
+* * * * * * * * * *
 We've given you one function makeLine() to start with. The function takes in a line length, and builds a line of asterisks and returns the line with a newline character.
 
 function makeLine(length) {
@@ -35,3 +35,11 @@ function makeLine(length) {
     }
     return line + "\n";
 }
+
+function buildTriangle(rows) {
+  for (let i = 1; i <= rows; i++) {
+    console.log(makeLine(i))
+  }
+}
+
+buildTriangle(10)
