@@ -8,5 +8,25 @@ For example, say we called the function with the following arguments.
 
 loopy([15, 90], [2, 5], ["Batty", "Beacon"]);
 
-The loopy function should log to the console all the numbers from 15 to 90, except replacing multiples of 2 with "Batty", multiples of 5 with "Beacon", and multiples of 2 and 5 with "BattyBeacon".
+The loopy function should log to the console all the numbers from 15 to 90,
+except replacing multiples of 2 with "Batty", multiples of 5 with "Beacon", and multiples of 2 and 5 with "BattyBeacon".
 */
+
+const loopy = (range, multiples, words) => {
+  for (let i = range[0]; i <= range[1]; i++) {
+    const first = i % multiples[0] === 0
+    const second = i % multiples[1] === 0
+
+    if (first && second) {
+      console.log(words[0] + words[1])
+    } else if (first) {
+      console.log(words[0])
+    } else if (second) {
+      console.log(words[1])
+    } else {
+      console.log(i)
+    }
+  }
+}
+
+loopy([15, 90], [2, 5], ["Batty", "Beacon"])
